@@ -7,7 +7,7 @@ To follow the original SwiftNIO based application somewhat closely, it first lis
 ## Usage
 
 - Run this project.
-- It starts a listener at https://127.0.0.1:8080.
+- It starts a proxy listener at http://127.0.0.1:8080.
 - Connect to it using `curl --proxy http://127.0.0.1:8080 --insecure --verbose https://127.0.0.1:8080`  
 - Curl logging shows that `HelloHandler` sends us back the message `hello`.
 - Uncomment the alternate code in `func addSSLServer(context: ChannelHandlerContext)`, run the Curl command again and notice that `HelloHandler` does not receive a request. 
